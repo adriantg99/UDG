@@ -11,6 +11,11 @@ html, body {
   max-width: 100%;
   
 }
+
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Asegura que el contenedor del encabezado no corte el contenido flotante */
 .header-navigation {
   position: relative;
@@ -478,4 +483,79 @@ body {
   font-size: 12px;
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(91, 40, 117, 0.3);
+}
+/* Fondo de pantalla suave */
+body {
+  background-color: #f7f5f9;
+}
+
+/* Contenedor en tarjeta blanca con sombra */
+.tarjeta-elegante-contenedor {
+  max-width: 850px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 45px 50px;
+  border-radius: 16px;
+  border-top: 5px solid #5b2875; /* Barra morada superior */
+  box-shadow: 0 10px 30px rgba(91, 40, 117, 0.08);
+}
+
+/* Título */
+.titulo-destacado {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Libre Bodoni", serif;
+  color: #48205f;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Texto del Artículo 44 */
+.intro-paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Lista con viñetas de palchita morada */
+.lista-personalizada {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-personalizada li {
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.lista-personalizada li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: #5b2875;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Formato para negritas */
+strong {
+  color: #111111;
+  font-weight: 700;
 }
