@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad De Género - TEE Sonora</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&family=Montserrat:wght@600;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+
+    /* Barra superior de aviso */
+    .top-bar {
+      background-color: #48205F;
+      color: #C3B8C4;
+      min-height: 25px;
+      text-align: left;
+      padding: 2px 0 2px 200px;
+      font-size: 12px;
+      line-height: 25px;
+      font-family: "Outfit", sans-serif;
+    }
+
+    /* Contenedor principal del encabezado (Área Blanca Institucional) */
+    .header-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px; /* Separación armónica entre elementos */
+      padding: 15px 50px;
+      background-color: #fbfbfa; /* Blanco hueso mate institucional */
+      border-bottom: 2px solid #5b2875; /* Borde inferior morado */
+    }
+
+    /* Logo ajustado */
+    .logo img {
+      height: 90px;
+      width: auto;
+      display: block;
+      margin: 0; /* Sin márgenes forzados */
+    }
+
+    /* Línea divisoria vertical de oro/dorado */
+    .linea-separadora-dorada {
+      width: 2px;
+      height: 60px;
+      background: linear-gradient(180deg, #c5a059 0%, #d4af37 50%, #c5a059 100%);
+      border-radius: 1px;
+    }
+
+    /* Contenedor de texto institucional */
+    .titulo-contenedor {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Texto secundario legal/institucional */
+    .subtitulo-institucional {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #777777;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    /* Título principal Libre Bodoni */
+    .titulo-encabezado {
+      margin: 0;
+      color: #5b2875;
+      font-size: 42px;
+      font-weight: 700;
+      font-family: "Libre Bodoni", serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+
+    /* Banner Hero (Imagen de fondo intacta) */
+    .banner-hero {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .imagen-banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barra Morada Superior -->
+  <div class="top-bar">
+    <strong>TRIBUNAL ESTATAL ELECTORAL DE SONORA</strong>
+  </div>
+
+  <!-- Encabezado Institucional -->
+  <header class="header-navigation">
+    <div class="logo">
+      <img src="C:\Users\Sesio\Desktop\logo-tee.png" alt="Logo TEE Sonora">
+    </div>
+
+    <!-- Línea dorada decorativa -->
+    <div class="linea-separadora-dorada"></div>
+
+    <!-- Bloque de Texto -->
+    <div class="titulo-contenedor">
+      <span class="subtitulo-institucional">TRIBUNAL ESTATAL ELECTORAL DE SONORA</span>
+      <h1 class="titulo-encabezado">UNIDAD DE GÉNERO</h1>
+    </div>
+  </header>
+
+  <!-- Sección Imagen Banner -->
+  <section class="banner-hero">
+    <img src="C:\Users\Sesio\Desktop\Justicia entre mujeres unidas.png" alt="Ilustración" class="imagen-banner">
+  </section>
+
+</body>
+
+</html>

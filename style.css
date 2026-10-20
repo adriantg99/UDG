@@ -1,0 +1,481 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  
+}
+/* Asegura que el contenedor del encabezado no corte el contenido flotante */
+.header-navigation {
+  position: relative;
+  overflow: visible !important; /* Permite que el submenú salga del encabezado */
+  z-index: 1000; /* Lo mantiene por encima del resto de la página */
+}
+ .outfit-uniquifier {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+    .banner-hero {
+      width: 100%;
+  max-width: 100%;
+  height: 60vh; /* Utiliza el 60% del alto de la pantalla (responsive) */
+  min-height: 250px; /* Evita que la imagen se reduzca demasiado en celulares */
+  overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+  position: relative;
+    }
+
+    .imagen-banner {
+     width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+  object-position: center; /* Mantiene el centro de la imagen siempre visible */
+  display: block;
+    }
+
+    body {
+      max-width: 100%;
+  overflow-x: hidden;
+    }
+
+    /* Contenedor principal del encabezado */
+    .header-navigation {
+      display: flex;
+      align-items: center;
+      /* Cambiamos a flex-start para pegar el menú inmediatamente después del logo */
+      justify-content: flex-start;
+      gap: 600px;
+      /* Distancia entre la foto/logo y las opciones del menú */
+      padding: 10px 40px;
+      background-color: #ffffff;
+      box-shadow: none;
+      border-bottom: 2px solid #5b2875;
+      ;
+    }
+
+    .logo img {
+      height: 50px;
+      display: block;
+    }
+
+        /* Ajuste de la navegación */
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinea los elementos al inicio */
+  gap: 100px;                   /* Espacio entre el logo y el texto */
+  padding: 10px 40px;
+  background-color: #fbfbfa;
+  border-bottom: 2px solid #5b2875;
+}
+
+/* Ajuste del logo (Quitamos el margin-left de 350px) */
+.logo img {
+        height: 90px;
+  width: auto;
+  display: block;
+  margin: 0;                   /* Importante: para que no empuje el logo al centro */
+}
+
+.linea-separadora-dorada {
+  width: 6px; /* Grosor visible identico a la imagen */
+  height: 65px; /* Altura que abarca el alto del texto */
+  
+  /* Gradiente metálico: Oscuro -> Luz/Brillo Blanco-Dorado -> Oscuro */
+  background: linear-gradient(
+    90deg, 
+    #9A7023 0%, 
+    #C5A059 25%, 
+    #FFE8A3 50%, 
+    #D4AF37 75%, 
+    #8A6016 100%
+  );
+  
+  border-radius: 2px; /* Borde levemente redondeado */
+  
+  /* Sombra suave dorada para darle el efecto de volumen de la foto */
+  box-shadow: 2px 0 8px rgba(212, 175, 55, 0.35);
+}
+
+.libre-bodoni-uniquifier {
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Estilo para el texto UNIDAD DE GÉNERO */
+.titulo-encabezado {
+  color: #5b2875;               /* Color morado del tema */
+  font-size: 48px;              /* Tamaño de la letra */
+  font-weight: 700;             /* Negrita */
+  font-family: "Libre Bodoni", serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+/* 3. Menú de Navegación */
+    .menu-principal {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-item {
+      position: relative; /* Permite posicionar la lista flotante */
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #555555;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 12px 0;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #5b2875;
+    }
+
+
+    .flecha {
+      font-size: 9px;
+    }
+
+    /* 4. Submenú Desplegable (Caja blanca) */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%; /* Se despliega exactamente abajo del botón */
+      left: 0;
+      background-color: #ffffff;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 4px 4px;
+      min-width: 170px;
+      list-style: none;
+      padding: 8px 0;
+      margin: 0;
+      z-index: 1000; /* Asegura que flote POR ENCIMA del banner */
+      border-top: 3px solid #5b2875;
+      overflow: visible; /* Asegura que el contenido interno se muestre completo */
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px 18px;
+      color: #444444;
+      text-decoration: none;
+      font-size: 14px; /* tamaño de letras opciones menu */
+      font-weight: 500;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f5f0f8;
+      color: #5b2875;
+    }
+
+    /* Activa la visibilidad del menú al pasar el ratón */
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .seccion-tarjetas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: #f7f5f2;
+}
+
+/* Estilo individual de la tarjeta con fondo beige-bronce desvanecido */
+.tarjeta {
+  width: 340px;
+  height: 440px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  
+  /* Gradiente desvanecido de la estatua de bronce */
+  background: linear-gradient(180deg, #E6D8C3 0%, #CBB89E 50%, #B8A183 100%);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Al inicio: centrado vertical */
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #D8C3A5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+/* Caja con borde blanco para el Título (Inicia centrada) */
+.tarjeta-caja {
+  border: 1px solid #ffffff;
+  background: linear-gradient(135deg, #c9b08a 0%, #edd8b8 45%, #bfa278 70%, #997e56 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 22px 18px;
+  width: 85%;
+  text-align: center;
+  box-sizing: border-box;
+  transform: translateY(-10px); /* Posición inicial en el centro */
+  transition: transform 0.4s ease-in-out;
+  border-radius: 12px;
+}
+
+.tarjeta-caja h2 {
+  color: #ffffff;
+  font-family: "Libre Bodoni", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke: 0.4px #000000; /* Grosor y color del borde (1px negro) */
+  paint-order: stroke fill;          /* Mantiene la letra clara por dentro sin 'comerse' el relleno */
+
+}
+
+/* Contenido del texto oculto al inicio */
+.tarjeta-contenido {
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  text-align: justify;
+  margin-top: 22px;
+  hyphens: auto;
+}
+
+/* Texto en café bronce oscuro para perfecta lectura sobre el beige */
+.tarjeta-contenido p {
+  color: #ffffffd2;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- EFECTOS AL PASAR EL MOUSE (HOVER) --- */
+
+/* 1. Sube la caja del título */
+.tarjeta:hover .tarjeta-caja {
+  transform: translateY(0);
+}
+
+/* 2. Revela el texto abajo */
+.tarjeta:hover .tarjeta-contenido {
+  opacity: 1;
+  max-height: 250px;
+  transform: translateY(0);
+}
+
+/* 3. Reacomoda el espacio interno de la tarjeta */
+.tarjeta:hover {
+  justify-content: flex-start;
+  padding-top: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal centrado */
+.seccion-que-hacemos {
+  max-width: 900px;         /* Limita el ancho para que no se extienda a toda la pantalla */
+  margin: 50px auto;        /* Centra la sección en la pantalla horizontalmente */
+  padding: 0 20px;          /* Espaciado de seguridad para pantallas pequeñas */
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333333;
+}
+
+/* Título centrado */
+.titulo-seccion {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+/* Lista alineada */
+.lista-actividades {
+  list-style-type: disc;    /* Muestra los puntos (viñetas) */
+  padding-left: 20px;       /* Espacio a la izquierda para los puntos */
+}
+
+.lista-actividades li {
+  font-size: 16px;
+  line-height: 1.6;         /* Separa el texto de cada renglón */
+  margin-bottom: 20px;      /* Espacio entre cada viñeta */
+  text-align: left;         /* Mantiene el texto alineado a la izquierda */
+}
+
+/* Fondo suave para toda la página que resalta la tarjeta */
+body {
+  background-color: #f7f5f9;
+}
+
+/* 1. Contenedor Principal (Tarjeta Elegante con Sombra) */
+.tarjeta-elegante-contenedor {
+  max-width: 850px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 45px 50px;
+  border-radius: 16px;
+  border-top: 5px solid #5b2875; /* Franja morada superior */
+  box-shadow: 0 10px 30px rgba(91, 40, 117, 0.08); /* Sombra suave morada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sutil movimiento al pasar el cursor */
+.tarjeta-elegante-contenedor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(91, 40, 117, 0.12);
+}
+
+/* 2. Título centrado con acento dorado */
+.titulo-destacado {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Libre Bodoni", serif;
+  color: #48205f;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* 3. Lista con Viñetas Personalizadas (Checkmark / Círculo Morado) */
+.lista-personalizada {
+  list-style: none; /* Quita los puntos negros por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-personalizada li {
+  position: relative;
+  padding-left: 42px; /* Espacio para poner la viñeta custom */
+  margin-bottom: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.lista-personalizada li:last-child {
+  margin-bottom: 0;
+}
+
+/* Creación del círculo de viñeta personalizado */
+.lista-personalizada li::before {
+  content: "✓"; /* O puedes usar "✦" */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background-color: #5b2875; /* Morado institucional */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(91, 40, 117, 0.3);
+}
+
+/* Fondo suave para toda la página que resalta la tarjeta */
+body {
+  background-color: #f7f5f9;
+}
+
+/* 1. Contenedor Principal (Tarjeta Elegante con Sombra) */
+.tarjeta-elegante-contenedor {
+  max-width: 850px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 45px 50px;
+  border-radius: 16px;
+  border-top: 5px solid #5b2875; /* Franja morada superior */
+  box-shadow: 0 10px 30px rgba(91, 40, 117, 0.08); /* Sombra suave morada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sutil movimiento al pasar el cursor */
+.tarjeta-elegante-contenedor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(91, 40, 117, 0.12);
+}
+
+/* 2. Título centrado con acento dorado */
+.titulo-destacado {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Libre Bodoni", serif;
+  color: #48205f;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* 3. Lista con Viñetas Personalizadas (Checkmark / Círculo Morado) */
+.lista-personalizada {
+  list-style: none; /* Quita los puntos negros por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-personalizada li {
+  position: relative;
+  padding-left: 42px; /* Espacio para poner la viñeta custom */
+  margin-bottom: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.lista-personalizada li:last-child {
+  margin-bottom: 0;
+}
+
+/* Creación del círculo de viñeta personalizado */
+.lista-personalizada li::before {
+  content: "✓"; /* O puedes usar "✦" */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background-color: #5b2875; /* Morado institucional */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(91, 40, 117, 0.3);
+}
