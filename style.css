@@ -559,3 +559,92 @@ strong {
   color: #111111;
   font-weight: 700;
 }
+
+/* Fondo suave para la pantalla */
+body {
+  background-color: #f7f5f9;
+}
+
+/* Contenedor tipo Tarjeta Elegante */
+.tarjeta-elegante-contenedor {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 45px 50px;
+  border-radius: 16px;
+  border-top: 5px solid #5b2875; /* Barra superior morada */
+  box-shadow: 0 10px 30px rgba(91, 40, 117, 0.08);
+}
+
+/* Título Principal: Marco Jurídico */
+.titulo-destacado {
+  text-align: center;
+  font-size: 34px;
+  font-family: "Libre Bodoni", serif;
+  color: #48205f;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* Subtítulos para los orígenes (Internacional, Nacional, Estatal) */
+.subtitulo-origen {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #333333;
+  margin: 35px 0 18px 0;
+  border-bottom: 2px solid #f0eaf5;
+  padding-bottom: 8px;
+}
+
+/* Primera sección de subtítulo sin margen superior amplio */
+.subtitulo-origen:first-of-type {
+  margin-top: 10px;
+}
+
+/* Estilo de lista con palchita morada */
+.lista-personalizada {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-personalizada li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lista-personalizada li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #5b2875;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Estilo para los enlaces de los documentos */
+.lista-personalizada li a {
+  color: #5b2875; /* Morado para indicar que es un enlace */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por encima del link */
+.lista-personalizada li a:hover {
+  color: #8339a8;
+  text-decoration: underline;
+}
