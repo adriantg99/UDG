@@ -1,0 +1,46 @@
+/* ==========================================================
+   BASE: reset, variables y estilos globales
+   ========================================================== */
+
+:root {
+  --morado: #5b2875;
+  --morado-oscuro: #48205f;
+  --morado-hover: #8339a8;
+  --morado-claro: #f5f0f8;
+  --lila-texto: #c3b8c4;
+  --fondo-pagina: #f7f5f9;
+  --fondo-header: #fbfbfa;
+  --texto: #333333;
+
+  --fuente-titulos: "Libre Bodoni", serif;
+  --fuente-texto: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  scrollbar-gutter: stable;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--fondo-pagina);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Formato para negritas */
+strong {
+  color: #111111;
+  font-weight: 700;
+}

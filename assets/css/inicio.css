@@ -1,0 +1,112 @@
+/* ==========================================================
+   INICIO: banner y tarjetas interactivas (index.html)
+   ========================================================== */
+
+/* Banner principal */
+.banner-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* 60% del alto de la pantalla */
+  min-height: 250px;
+  overflow: hidden;
+}
+
+.imagen-banner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la proporción sin deformar */
+  object-position: center;
+}
+
+/* Contenedor de las 3 tarjetas */
+.seccion-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: #f7f5f2;
+}
+
+/* Tarjeta con fondo beige-bronce desvanecido */
+.tarjeta {
+  position: relative;
+  width: 340px;
+  max-width: 100%;
+  height: 440px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Al inicio: centrado vertical */
+  align-items: center;
+  background: linear-gradient(180deg, #E6D8C3 0%, #CBB89E 50%, #B8A183 100%);
+  border: 1px solid #D8C3A5;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+/* Caja del título (inicia centrada) */
+.tarjeta-caja {
+  width: 85%;
+  padding: 22px 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #c9b08a 0%, #edd8b8 45%, #bfa278 70%, #997e56 100%);
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  transition: transform 0.4s ease-in-out;
+}
+
+.tarjeta-caja h2 {
+  color: #ffffff;
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke: 0.4px #000000;
+  paint-order: stroke fill;
+}
+
+/* Texto oculto al inicio */
+.tarjeta-contenido {
+  opacity: 0;
+  max-height: 0;
+  margin-top: 22px;
+  text-align: justify;
+  hyphens: auto;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.tarjeta-contenido p {
+  color: #ffffffd2;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* --- Efectos al pasar el mouse --- */
+.tarjeta:hover {
+  justify-content: flex-start;
+  padding-top: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta:hover .tarjeta-caja {
+  transform: translateY(0);
+}
+
+.tarjeta:hover .tarjeta-contenido {
+  opacity: 1;
+  max-height: 250px;
+  transform: translateY(0);
+}

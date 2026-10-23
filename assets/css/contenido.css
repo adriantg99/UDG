@@ -1,0 +1,117 @@
+/* ==========================================================
+   CONTENIDO: tarjeta blanca y listas de las páginas internas
+   (que-hacemos, atribuciones, marco-juridico)
+   ========================================================== */
+
+/* Tarjeta blanca con sombra */
+.tarjeta-elegante-contenedor {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 45px 50px;
+  background-color: #ffffff;
+  border-top: 5px solid var(--morado);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(91, 40, 117, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-elegante-contenedor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(91, 40, 117, 0.12);
+}
+
+/* Título de la página */
+.titulo-destacado {
+  text-align: center;
+  font-size: 34px;
+  font-family: var(--fuente-titulos);
+  color: var(--morado-oscuro);
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* Párrafo introductorio (Artículo 44) */
+.intro-paragraph {
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--texto);
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Subtítulos (Internacional, Nacional, Estatal) */
+.subtitulo-origen {
+  font-family: var(--fuente-texto);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--texto);
+  margin: 35px 0 18px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0eaf5;
+}
+
+.subtitulo-origen:first-of-type {
+  margin-top: 10px;
+}
+
+/* Lista con viñeta de palomita morada */
+.lista-personalizada {
+  list-style: none;
+}
+
+.lista-personalizada li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 14px;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--texto);
+}
+
+.lista-personalizada li:last-child {
+  margin-bottom: 0;
+}
+
+.lista-personalizada li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--morado);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(91, 40, 117, 0.3);
+}
+
+/* Enlaces a documentos */
+.lista-personalizada li a {
+  color: var(--morado);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.lista-personalizada li a:hover {
+  color: var(--morado-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-elegante-contenedor {
+    margin: 24px 16px;
+    padding: 30px 20px;
+  }
+
+  .titulo-destacado {
+    font-size: 26px;
+  }
+}
