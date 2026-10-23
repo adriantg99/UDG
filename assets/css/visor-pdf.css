@@ -1,0 +1,98 @@
+/* ==========================================================
+   VISOR PDF: páginas que muestran un documento a pantalla completa
+   (guia.html, protocolo-vpmrg.html)
+   ========================================================== */
+
+/* La página ocupa exactamente el alto de la ventana y el PDF llena el resto */
+html:has(.header-bar),
+body:has(.header-bar) {
+  height: 100%;
+  overflow: hidden;
+}
+
+body:has(.header-bar) {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra con el título del documento y botón de descarga */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 450px;
+  background-color: #703a8b;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.header-bar h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Botón de descarga */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 8px 18px;
+  background-color: #7955cc;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: #7c3aed;
+}
+
+/* Contenedor del PDF */
+.pdf-container {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.pdf-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-mensaje {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .header-bar {
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-bar {
+    padding: 10px 16px;
+  }
+
+  /* En celular se permite el scroll para no ocultar el visor */
+  html:has(.header-bar),
+  body:has(.header-bar) {
+    height: auto;
+    overflow: auto;
+  }
+
+  .pdf-container {
+    flex: none;
+    height: 80vh;
+  }
+}

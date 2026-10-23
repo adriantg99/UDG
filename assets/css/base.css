@@ -39,6 +39,15 @@ img {
   max-width: 100%;
 }
 
+/* Pie de página (igual en todas las páginas) */
+.footer {
+  padding: 16px;
+  text-align: center;
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  color: #777777;
+}
+
 /* Formato para negritas */
 strong {
   color: #111111;
