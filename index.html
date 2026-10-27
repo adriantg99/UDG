@@ -80,43 +80,60 @@
     <!-- Tarjetas interactivas -->
     <section class="seccion-tarjetas">
 
-      <article class="tarjeta">
-        <div class="tarjeta-caja">
+      <details class="tarjeta">
+        <summary class="tarjeta-caja">
           <h2>MISIÓN</h2>
-        </div>
+        </summary>
         <div class="tarjeta-contenido">
           <p>Nuestra misión se centra en integrar de manera transversal el enfoque de género y la no discriminación en
             todas las áreas y procesos del Tribunal; así como implementar proyectos y acciones destinadas a garantizar la
             igualdad entre mujeres y hombres en el ejercicio pleno de sus derechos político-electorales.</p>
         </div>
-      </article>
+      </details>
 
-      <article class="tarjeta">
-        <div class="tarjeta-caja">
+      <details class="tarjeta">
+        <summary class="tarjeta-caja">
           <h2>VISIÓN</h2>
-        </div>
+        </summary>
         <div class="tarjeta-contenido">
           <p>Pendiente!!!</p>
         </div>
-      </article>
+      </details>
 
-      <article class="tarjeta">
-        <div class="tarjeta-caja">
+      <details class="tarjeta">
+        <summary class="tarjeta-caja">
           <h2>JUZGAR CON PERSPECTIVA DE GÉNERO</h2>
-        </div>
+        </summary>
         <div class="tarjeta-contenido">
           <p>Contribuye a promover una democracia más inclusiva y representativa, al fomentar la igualdad de oportunidades
             y la diversidad en la representación política.</p>
         </div>
-      </article>
+      </details>
 
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Unidad de Género. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Unidad de Género. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    const tarjetasConHover = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 769px)");
+
+    document.querySelectorAll(".tarjeta").forEach((tarjeta) => {
+      tarjeta.addEventListener("pointerenter", () => {
+        if (tarjetasConHover.matches) tarjeta.open = true;
+      });
+
+      tarjeta.addEventListener("pointerleave", () => {
+        if (tarjetasConHover.matches) tarjeta.open = false;
+      });
+
+      tarjeta.querySelector("summary").addEventListener("click", (event) => {
+        if (tarjetasConHover.matches && event.detail > 0) event.preventDefault();
+      });
+    });
+  </script>
 
 </body>
 
