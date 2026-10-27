@@ -35,7 +35,7 @@
   position: relative;
   width: 340px;
   max-width: 100%;
-  height: 440px;
+  min-height: 440px; /* Se cambia height por min-height para evitar desbordes */
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   overflow: hidden;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Caja del título (inicia centrada) */
@@ -83,7 +83,7 @@
   text-align: justify;
   hyphens: auto;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
 }
 
 .tarjeta-contenido p {
@@ -94,7 +94,8 @@
   line-height: 1.5;
 }
 
-/* --- Efectos al pasar el mouse --- */
+/* --- EFECTOS EN ESCRITORIO Efectos al pasar el mouse --- */
+@media (hover: hover) and (pointer: fine) {
 .tarjeta:hover {
   justify-content: flex-start;
   padding-top: 40px;
@@ -107,6 +108,88 @@
 
 .tarjeta:hover .tarjeta-contenido {
   opacity: 1;
-  max-height: 250px;
+  max-height: 250px;  /*AQUI IBA 250 PERO ES CALE*/
   transform: translateY(0);
+}
+}
+
+/* REGLAS PARA PANTALLAS PEQUEÑAS (Celulares y Tablets) */
+@media (max-width: 768px) {
+  .banner-hero {
+    height: 35vh;
+    min-height: 180px;
+  }
+
+  .seccion-tarjetas {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 25px 15px;
+  }
+
+  .tarjeta-caja {
+    width: 90%;
+    transform: translateY(0);
+  }
+
+  .tarjeta-caja h2 {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .tarjeta-contenido {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+/* Botón de menú para celular */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Ajustes del encabezado en pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-navigation {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón en celulares */
+    margin: 10px 0;
+  }
+
+  .menu-principal {
+    display: none; /* Oculta el menú por defecto en celulares */
+    width: 100%;
+  }
+
+  .menu-principal.activo {
+    display: block; /* Se abre al presionar el botón */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
 }
