@@ -47,13 +47,14 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: box-shadow 0.45s ease;
 }
 
 /* Caja del título (inicia centrada) */
 .tarjeta-caja {
   width: 85%;
   padding: 22px 18px;
+  list-style: none;
   text-align: center;
   background: linear-gradient(135deg, #c9b08a 0%, #edd8b8 45%, #bfa278 70%, #997e56 100%);
   border: 1px solid #ffffff;
@@ -61,6 +62,16 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-10px);
   transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.tarjeta-caja::-webkit-details-marker {
+  display: none;
+}
+
+.tarjeta-caja:focus-visible {
+  outline: 3px solid #48205f;
+  outline-offset: 4px;
 }
 
 .tarjeta-caja h2 {
@@ -77,40 +88,57 @@
 
 /* Texto oculto al inicio */
 .tarjeta-contenido {
+  display: block;
   opacity: 0;
   max-height: 0;
-  margin-top: 22px;
+  margin-top: 0;
+  overflow: hidden;
   text-align: justify;
   hyphens: auto;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  transition: max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, margin-top 0.80s ease, transform 0.45s ease;
 }
 
 .tarjeta-contenido p {
-  color: #ffffffd2;
+  color: #30271f;
   font-family: var(--fuente-texto);
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
 }
 
-/* --- EFECTOS EN ESCRITORIO Efectos al pasar el mouse --- */
-@media (hover: hover) and (pointer: fine) {
-.tarjeta:hover {
-  justify-content: flex-start;
-  padding-top: 40px;
+/* --- Apertura de las tarjetas --- */
+.tarjeta[open] {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.tarjeta:hover .tarjeta-caja {
+.tarjeta[open] .tarjeta-caja {
   transform: translateY(0);
 }
 
-.tarjeta:hover .tarjeta-contenido {
+.tarjeta[open] .tarjeta-contenido {
   opacity: 1;
-  max-height: 250px;  /*AQUI IBA 250 PERO ES CALE*/
+  max-height: 500px;
+  margin-top: 22px;
   transform: translateY(0);
 }
+
+/* --- Efecto visual de hover en escritorio --- */
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .tarjeta:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .tarjeta:hover .tarjeta-caja {
+    transform: translateY(0);
+  }
+
+  .tarjeta:hover .tarjeta-contenido {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 22px;
+    transform: translateY(0);
+  }
 }
 
 /* REGLAS PARA PANTALLAS PEQUEÑAS (Celulares y Tablets) */
@@ -143,9 +171,19 @@
   }
 
   .tarjeta-contenido {
-    opacity: 1;
-    max-height: 500px;
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
     transform: translateY(0);
+  }
+
+  .tarjeta[open] {
+    min-height: 0;
+    padding-top: 25px;
+  }
+
+  .tarjeta[open] .tarjeta-contenido {
+    margin-top: 22px;
   }
 }
 
