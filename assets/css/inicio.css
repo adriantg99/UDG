@@ -123,6 +123,14 @@
   transform: translateY(0);
 }
 
+.subtitulo-reglamento {
+  font-style: italic;           /* Aplica la cursiva */
+  font-size: 100px;              /* Ajusta el tamaño al gusto */
+  color: #4a4a4a;               /* Color gris oscuro elegante para combinar */
+  margin-bottom: 12px;          /* Espaciado antes del artículo 44 */
+  font-family: inherit;         /* Hereda la misma tipografía del documento */
+}
+
 /* --- Efecto visual de hover en escritorio --- */
 @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
   .tarjeta:hover {

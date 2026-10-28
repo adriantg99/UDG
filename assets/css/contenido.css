@@ -33,7 +33,7 @@
 /* Párrafo introductorio (Artículo 44) */
 .intro-paragraph {
   font-family: var(--fuente-texto);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--texto);
   margin-bottom: 25px;
@@ -60,6 +60,16 @@
   list-style: none;
 }
 
+.subtitulo-reglamento {
+  font-weight: bold;         /* Negrita */
+  font-style: italic;           /* Aplica la cursiva */
+  font-size: 20px;              /* Ajusta el tamaño al gusto */
+  color: #4a4a4a;               /* Color gris oscuro elegante para combinar */
+  margin-bottom: 2px;          /* Espaciado antes del artículo 44 */
+  font-family: inherit;         /* Hereda la misma tipografía del documento */
+}
+
+/**ATRIBUCIOOONEEES**/
 .lista-personalizada li {
   position: relative;
   padding-left: 35px;
@@ -68,6 +78,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: var(--texto);
+  text-align: justify;
 }
 
 .lista-personalizada li:last-child {
