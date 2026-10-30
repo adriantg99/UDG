@@ -373,3 +373,54 @@
   font-weight: 700;
   letter-spacing: 0.3px;
 }
+
+
+
+.banner-naranja {
+  /* Fondo con degradado ocre/naranja dorado idéntico al de la imagen */
+  background: linear-gradient(180deg, #a46e12 0%, #915f0d 100%);
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner-contenido {
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-contenido h2 {
+  color: #ffffff;
+  font-family: 'Bodoni Moda', sans-serif; /* O la tipografía que estés usando */
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* Sombra suave de texto para darle el realce de la imagen */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.contenedor-video {
+  max-width: 1000px; /* Mismo ancho que la caja de sentencias */
+  width: 90%;
+  margin: 20px auto; /* Lo centra horizontalmente */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+}
+
+.contenedor-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
