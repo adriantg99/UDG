@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protocolo para la Atención de la Violencia Política contra las Mujeres en Razón de Género en Sonora | Unidad de Género - TEE Sonora</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&display=swap" rel="stylesheet">
+  <!-- Estilos (comunes + de la página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/visor-pdf.css">
+</head>
+
+<body>
+
+  <!-- ========== ENCABEZADO (igual en todas las páginas) ========== -->
+  <div class="top-bar">
+    <strong>TRIBUNAL ESTATAL ELECTORAL DE SONORA</strong>
+  </div>
+
+  <header class="header-navigation">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-tee.png" alt="Logo TEE Sonora">
+    </a>
+    <div class="linea-separadora-dorada"></div>
+    <div class="titulo-contenedor">
+      <h1 class="titulo-encabezado">UNIDAD DE GÉNERO</h1>
+    </div>
+    
+
+    <nav class="menu-principal">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link inicio">INICIO</a>
+        </li>
+
+        <!-- CONÓCENOS -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link">CONÓCENOS <span class="flecha">&#9660;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="que-hacemos.html">¿Qué Hacemos?</a></li>
+            <li><a href="atribuciones.html">Atribuciones</a></li>
+            <li><a href="marco-juridico.html">Marco Jurídico</a></li>
+          </ul>
+        </li>
+
+        <!-- INFORMACIÓN RELEVANTE -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link">INFORMACIÓN RELEVANTE <span class="flecha">&#9660;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="guia.html">Guía para Juzgar con Perspectiva de Género en Materia Electoral</a></li>
+            <li><a href="protocolo-vpmrg.html">Protocolo VPMRG</a></li>
+            <li><a href="#">Pacto Social</a></li>
+            <li><a href="https://www.ieesonora.org.mx/registro_local_personas_sancionadas" target="_blank" rel="noopener noreferrer">Registro Local de Personas Sancionadas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="#" class="nav-link">ESTADÍSTICA</a></li>
+        <li class="nav-item"><a href="sentencias.html" class="nav-link">SENTENCIAS</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">ACTIVIDADES</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- ========== FIN ENCABEZADO ========== -->
+
+    <div class="banner-morado">
+  <div class="banner-contenido">
+    <h2>Sentencias</h2>
+    <!-- Si necesitas un botón como el de la imagen, puedes agregar esto: -->
+    <!-- <a href="#" class="btn-descargar">Ver Sentencias</a> -->
+  </div>
+</div>
+
+<!-- Carga de la tipografía Serif para el título -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&display=swap" rel="stylesheet">
+
+<!-- 1. Menú de Selección de Periodo -->
+<div class="centrado-padre">
+  <div class="contenedor-filtro">
+    <div class="caja-periodo">
+      <span class="icono-calendario">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+          <line x1="8" y1="14" x2="8.01" y2="14"></line>
+          <line x1="12" y1="14" x2="12.01" y2="14"></line>
+          <line x1="16" y1="14" x2="16.01" y2="14"></line>
+        </svg>
+      </span>
+      <label for="select-periodo" class="etiqueta-periodo">Periodo:</label>
+      <select id="select-periodo" class="menu-desplegable" onchange="cambiarAño(this.value)">
+        <option value="2026" selected>Año 2026</option>
+        <option value="2025">Año 2025</option>
+        <option value="2024">Año 2024</option>
+        <option value="2023">Año 2023</option>
+        <option value="2022">Año 2022</option>
+        <option value="2021">Año 2021</option>
+        <option value="2020">Año 2020</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Caja contenedora de Sentencias -->
+<div class="caja-sentencias">
+  <div class="caja-header">
+    <div class="caja-titulo">
+      <span class="icono-carpeta">📁</span>
+      <h2 id="titulo-sentencias">Sentencias 2026 (0)</h2>
+    </div>
+    <span class="flecha-desplegable">▲</span>
+  </div>
+
+  <!-- La lista de documentos se insertará aquí con JavaScript -->
+  <ul class="lista-documentos" id="lista-documentos"></ul>
+</div>
+
+<script>
+  // Base de datos de documentos por año
+  const documentosPorAno = {
+    "2026": [
+      { nombre: "ACUERDO PLENARIO PSVG-SP-01/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/05/ACUERDO-PLENARIO-PSVG-SP-01-2026.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-PP-03/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/06/RESOLUCION%20PSVG-PP-03-2026.pdf" },
+      { nombre: "RESOLUCIÓN PSVG-SP-01/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/06/RESOLUCION-PSVG-SP-01-2026.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-TP-02/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/06/ACUERDO-PLENARIO%20PSVG-TP-02-2026.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-PP-04/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/08/ACUERDO-PLENARIO-PSVG-PP-04-2026.pdf" },
+      { nombre: "RESOLUCIÓN PSVG-PP-03/2026", url: "https://www.teesonora.org.mx/docs/resoluciones/2026/09/RESOLUCI%C3%93N_PSVG-PP-03-2026_0001.pdf" }
+    ],
+    "2025": [
+      { nombre: "PSVG-TP-01/2025", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/01/PSVG-TP-01-2025.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-SP-08/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/01/ACUERDO-PLENARIO-PSVG-SP-08-2024.pdf" },
+      { nombre: "PSVG-SP-02/2025", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/02/PSVG-SP-02-2025.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-TP-03/2025", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/04/TEE-ACUERDO-PLENARIO-PSVG-TP-03-2025.pdf" },
+      { nombre: "PSVG-SP-08/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/04/PSVG-SP-08-2024.pdf" },
+      { nombre: "PSVG-TP-02/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/05/RESOLUCION-PSVG-TP-02-2024.pdf" },
+      { nombre: "PSVG-PP-01/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/06/PSVG-PP-01-2023.pdf" },
+      { nombre: "PSVG-TP-03/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/06/RESOLUCION-PSVG-TP-03-2024.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-SP-04/2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2025/10/PSVG-SP-04-2022.pdf" }
+    
+    ],
+    "2024": [
+      { nombre: "ACUERDO PLENARIO PSVG-SP-04/2022.", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/03/PSVG-SP-04-2022.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-TP-01/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/07/PSVG-TP-01-2024.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-PP-04/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/08/ACUERDO-PLENARIO-PSVG-PP-04-2024.pdf" },
+      { nombre: "PSVG-TP-02/2024 ACUERDO PLENARIO", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/08/PSVG-TP-02-2024.pdf" },
+      { nombre: "PSVG-TP-01/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/09/PSVG-TP-01-2024.pdf" },
+      { nombre: "PSVG-PP-04/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/10/PSVG-PP-04-2004.pdf" },
+      { nombre: "PSVG-SP-07/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/11/PSVG-SP-07-2024.pdf" },
+      { nombre: "PSVG-PP-06/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/11/PSVG-PP-06-2024.pdf" },
+      { nombre: "PSVG-TP-05/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/11/PSVG-TP-05-2024.pdf" },
+      { nombre: "ACUERDO PLENARIO PSVG-TP-03/2024", url: "https://www.teesonora.org.mx/docs/resoluciones/2024/11/ACUERDO%20PLENARIO%20PSVG-TP-03-2024-11.pdf" }
+    ],
+    "2023": [
+        { nombre: "ACUERDO PLENARIO PSVG-SP-04/2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/02/PSVG-SP-04-2022-17.pdf" },
+        { nombre: "ACUERDO PLENARIO PSVG-PP-01/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/03/PSVG-PP-01-2023-09.pdf" },
+        { nombre: "ACUERDO PLENARIO PSVG-SP-02/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/08/PSVGSP0223-2.pdf" },
+        { nombre: "PSVG-PP-01/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/09/RESOLUCION-PSVG-PP-01-2023.pdf" },
+        { nombre: "PSVG-SP-02/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/10/PSVGSP0223.pdf" },
+        { nombre: "PSVG-SP-04/2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/12/PSVGSP0422X.pdf" },
+        { nombre: "PSVG-SP-02/2023 CUMPLIMENTADORA DE SG-JDC-98/2023", url: "https://www.teesonora.org.mx/docs/resoluciones/2023/12/PSVGSP0223-1.pdf" }
+    ],
+    "2022": [
+        { nombre: "PSVG-TP-10-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/01/PSVG-TP-10-2021.pdf" },
+        { nombre: "PSVG-SP-06-2021 CUMPLIMENTADORA", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/01/PSVG-SP-06-2021.pdf" },
+        { nombre: "PSVG-TP-02-2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/02/PSVG-TP-02-2022.pdf" },
+        { nombre: "PSVG-SP-01-2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/02/PSVG-SP-01-2022.pdf" },
+        { nombre: "PSVG-TP-10-2021 - CUMPLIMENTADORA", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/03/PSVG-TP-10-21.pdf" },
+        { nombre: "PSVG-SP-11-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/03/PSVG-SP-11-2021A.pdf" },
+        { nombre: "PSVG-SP-06-2021 CUMPLIMENTADORA", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/04/PSVG-SP-06-2021-CUMPLIMENTADORA.pdf" },
+        { nombre: "PSVG-SP-06-2021 CUMPLIMENTADORA", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/05/PSVG-SP-06-2021-CUMPLI.pdf" },
+        { nombre: "ACUERDO PLENARIO PSVG-PP-03-2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/08/PSVG-PP-03-2022-.pdf" },
+        { nombre: "PSVG-PP-03-2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/10/PSVG-PP-03-2022.pdf" },
+        { nombre: "PSVG-SP-04-2022", url: "https://www.teesonora.org.mx/docs/resoluciones/2022/12/PSVG-SP-04-2022-15.pdf" }
+    
+    ],
+    "2021": [
+        { nombre: " ACUERDO PLENARIO PSVG-TP-01-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/02/PSVG-TP-01-21%20febrero.pdf" },
+        { nombre: "PSVG-TP-01-2020", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/02/PSVG-SP-01-20.pdf" }, 
+        { nombre: "ACUERDO PLENARIO PSVG-TP-01-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/03/PSVG-TP-01-21.pdf" },
+        { nombre: "PSVG-SP-01-2020", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/03/PSVG-SP-01-2020.pdf" }, 
+        { nombre: "PSVG-SP-02-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/06/PSVG-SP-02-21-J.pdf" },
+        { nombre: "PSVG-PP-03-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/06/PSVG-PP-03-21.pdf" },
+        { nombre: "PSVG-SP-04-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/06/PSVG-SP-04-21.pdf" },
+        { nombre: "PSVG-TP-01-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/07/PSVGT0121.pdf" },
+         { nombre: "PSVG-PP-05-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/07/PSVGP0521.pdf" },
+        { nombre: "PSVG-SP-06-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/07/PSVGS0621.pdf" },
+        { nombre: "PSVG-TP-07-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/08/PSVG-TP-07-21.pdf" },
+        { nombre: "PSVG-SP-02-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/09/PSVG-SP-02-21.pdf" },
+        { nombre: "PSVG-PP-08-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/09/PSVG-PP-08-21.pdf" },
+        { nombre: "PSVG-SP-09-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/09/PSVG-SP-09-21.pdf" },
+        { nombre: "ACUERDO PLENARIO PSVG-TP-10-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/10/PSVG-TP-10-21.pdf" },
+        { nombre: "PSVG-TP-01-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/11/PSVG-TP-01-21.pdf" },
+        { nombre: "PSVG-SP-11-2021", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/12/PSVG-SP-11-21.pdf" }
+
+    ],
+    "2020": [  
+    { nombre: "PSVG-TP-01/2020", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/02/PSVG-SP-01-20.pdf" },
+    { nombre: "PSVG-SP-01/2020", url: "https://www.teesonora.org.mx/docs/resoluciones/2021/06/PSVG-SP-04-21.pdf" }
+    ]
+  };
+
+  function cambiarAño(ano) {
+    const lista = document.getElementById("lista-documentos");
+    const titulo = document.getElementById("titulo-sentencias");
+    const docs = documentosPorAno[ano] || [];
+
+    // Actualizar título y contador
+    titulo.textContent = `Sentencias ${ano}`;
+
+    // Limpiar lista actual
+    lista.innerHTML = "";
+
+    // Si no hay documentos en el año
+    if (docs.length === 0) {
+      lista.innerHTML = `
+        <li>
+          <div class="link-documento" style="color: #6b7280; font-weight: normal;">
+            No hay sentencias disponibles para este periodo.
+          </div>
+        </li>`;
+      return;
+    }
+
+    // Renderizar lista con links
+    docs.forEach(doc => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <a href="${doc.url}" target="_blank" class="link-documento">
+          <span class="flecha-icono">➔</span>
+          <span class="texto-documento">${doc.nombre}</span>
+        </a>
+      `;
+      lista.appendChild(li);
+    });
+  }
+
+  // Cargar por defecto el año 2026 al inicio
+  cambiarAño("2026");
+</script>
