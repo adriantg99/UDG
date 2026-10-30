@@ -94,6 +94,10 @@
   transition: color 0.2s;
 }
 
+.nav-link[href="sentencias.html"] {
+  font-family: var(--fuente-titulos);
+}
+
 .nav-link:hover {
   color: var(--morado);
 }
