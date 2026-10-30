@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protocolo para la Atención de la Violencia Política contra las Mujeres en Razón de Género en Sonora | Unidad de Género - TEE Sonora</title>
+  <title>Actividades | Unidad de Género - TEE Sonora</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&display=swap" rel="stylesheet">
   <!-- Estilos (comunes + de la página) -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="assets/css/visor-pdf.css">
+  <link rel="stylesheet" href="assets/css/actividades.css">
+  <script src="assets/js/actividades.js" defer></script>
 </head>
 
 <body>
@@ -61,34 +61,170 @@
           </ul>
         </li>
 
-        <li class="nav-item"><a href="#" class="nav-link">ESTADÍSTICA</a></li>
+        <li class="nav-item"><a href="estadistica.html" class="nav-link">ESTADÍSTICA</a></li>
         <li class="nav-item"><a href="sentencias.html" class="nav-link">SENTENCIAS</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">ACTIVIDADES</a></li>
+        <li class="nav-item"><a href="actividades.html" class="nav-link" aria-current="page">ACTIVIDADES</a></li>
       </ul>
     </nav>
   </header>
 
     <!-- ========== FIN ENCABEZADO ========== -->
 
-    <!-- Carga de tipografía Bodoni Moda para el título y Montserrat para el texto general -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
-<div class="banner-naranja">
-  <div class="banner-contenido">
-    <h2>Día Naranja</h2>
+  <div class="banner-naranja">
+    <div class="banner-contenido">
+      <h2>Día Naranja</h2>
+    </div>
   </div>
-</div>
 
-<div class="contenedor-video">
-  <video controls playsinline preload="metadata" style="width: 100%; height: auto;">
-    <source src="assets/videos/naranja_principal.mp4" type="video/mp4">
-    Tu navegador no puede reproducir este video.
+  <main class="actividades-page">
+    <header class="actividades-intro">
+      <p class="actividades-eyebrow">Unidad de Género · TEE Sonora</p>
+    </header>
 
-    <a href="assets/videos/naranja_principal.mp4">Descargar o abrir el video</a>.
-  </video>
-</div>
+    <section aria-labelledby="videos-title">
+      <div class="actividades-heading">
+        <h3 id="videos-title">Día Naranja</h3>
+        <p>Conoce y comparte nuestros videos.</p>
+      </div>
+      <div class="actividades-videos">
+        <article class="actividad-video-card">
+          <a class="actividad-video-link" href="assets/videos/naranja_principal.mp4"
+            data-video-title="Día Naranja · Video principal" aria-label="Reproducir Día Naranja, video principal">
+            <div class="actividad-video-cover">
+              <img src="assets/img/naranja-principal-portada.jpg" alt="" width="960" height="540">
+              <span class="actividad-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="actividad-video-copy">
+              <span class="actividades-eyebrow">Video principal</span>
+              <h4>Día Naranja</h4>
+              <span class="actividad-video-action">Reproducir video <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </article>
+        <article class="actividad-video-card">
+          <a class="actividad-video-link" href="assets/videos/dia_naranja.mp4"
+            data-video-title="Día Naranja · Difusión" aria-label="Reproducir segundo video de Día Naranja">
+            <div class="actividad-video-cover">
+              <img src="assets/img/dia-naranja-portada.jpg" alt="" width="960" height="540">
+              <span class="actividad-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="actividad-video-copy">
+              <span class="actividades-eyebrow">Video</span>
+              <h4>Día Naranja · Difusión</h4>
+              <span class="actividad-video-action">Reproducir video <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="actividades-gallery" aria-labelledby="galeria-title">
+      <div class="actividades-heading">
+        <h3 id="galeria-title">Encuentros y actividades</h3>
+        <p>Acciones que fortalecen una cultura de igualdad.</p>
+      </div>
+      <div class="actividades-fotos">
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Capacitación</p>
+            <h4>Cartilla de Derechos de las Mujeres</h4>
+            <p>Imparte Secretaría de las Mujeres en Sonora (@SeMujeresSon), una capacitación al personal
+              del @TEE_Sonora, sobre la Cartilla de Derechos de las Mujeres.</p>
+          </div>
+        </article>
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Espacio de actividad</p>
+            <h4>Actividad 2</h4>
+            <p>Fotografía y descripción por incorporar.</p>
+          </div>
+        </article>
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Espacio de actividad</p>
+            <h4>Actividad 3</h4>
+            <p>Fotografía y descripción por incorporar.</p>
+          </div>
+        </article>
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Espacio de actividad</p>
+            <h4>Actividad 4</h4>
+            <p>Fotografía y descripción por incorporar.</p>
+          </div>
+        </article>
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Espacio de actividad</p>
+            <h4>Actividad 5</h4>
+            <p>Fotografía y descripción por incorporar.</p>
+          </div>
+        </article>
+        <article class="actividad-foto-card">
+          <div class="actividad-foto-pendiente">
+            <span aria-hidden="true">▧</span>
+            <p>Fotografía de la actividad</p>
+            <small>Imagen por incorporar</small>
+          </div>
+          <div class="actividad-foto-copy">
+            <p class="actividades-eyebrow">Espacio de actividad</p>
+            <h4>Actividad 6</h4>
+            <p>Fotografía y descripción por incorporar.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="actividad-modal" id="actividad-modal" aria-labelledby="actividad-modal-title"
+    aria-describedby="actividad-modal-note">
+    <div class="actividad-modal-header">
+      <h2 id="actividad-modal-title">Día Naranja · Video principal</h2>
+      <button class="actividad-modal-close" type="button" aria-label="Cerrar video" autofocus>
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <video id="actividad-player" controls playsinline muted preload="metadata"
+      poster="assets/img/naranja-principal-portada.jpg">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <p class="actividad-modal-note" id="actividad-modal-note">
+      Puedes activar el sonido desde los controles. Al terminar, el video se cierra y puedes explorar las tarjetas.
+    </p>
+    <p class="actividad-modal-error" id="actividad-video-error" role="status" hidden>
+      El video no está disponible en este momento.
+      <a id="actividad-video-download" href="assets/videos/naranja_principal.mp4">Abrir el archivo de video</a>.
+    </p>
+  </dialog>
+
+  <footer class="footer">
+    <p>&copy; 2026 Unidad de Género. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
