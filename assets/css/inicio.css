@@ -239,3 +239,127 @@
     text-align: center;
   }
 }
+
+.legal-info-card {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+  
+  background-color: #faf8f5; /* Tono crema sutil */
+  border-radius: 8px;
+  padding: 30px 45px;
+  
+  /* Doble borde dorado distintivo */
+  border: 1px solid #c1a17c;
+  outline: 1px solid #c1a17c;
+  outline-offset: -6px; /* Crea el efecto de doble recuadro interno */
+  
+  /* Tipografía */
+  color: #2c251e;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+  text-align: justify;
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor principal del diagrama */
+.flowchart-container {
+  width: 90%;
+  max-width: 1100px; /* Mismo ancho máximo que el recuadro de texto */
+  margin: 35px auto 50px auto; /* Separación superior e inferior respecto al contenido */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de la imagen */
+.flowchart-image {
+  width: 100%;
+  max-width: 550px; /* Ajusta este valor si deseas que la imagen sea más pequeña o más grande */
+  height: auto; /* Mantiene la proporción de la imagen sin deformarla */
+  display: block;
+  
+  /* Opcional: Borde suave y sombra para hacer juego con el estilo elegante */
+filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.2));
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .flowchart-container {
+    width: 95%;
+    margin: 25px auto 35px auto;
+  }
+}
+
+/* Estilo del recuadro de texto elegante */
+.info-card {
+  width: 90%;
+  max-width: 1100px; /* Alineado con el mismo ancho del cuadro superior */
+  margin: 35px auto;
+  padding: 25px 35px;
+  background-color: #FAF8F5; /* Tono beige/crema suave */
+  border: 1px solid #D6C3B1; /* Borde refinado en tono ocre suave */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Título de la tarjeta */
+.legal-basis-card .card-title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-family: 'Georgia', 'Times New Roman', serif; /* Aporta sofisticación */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4A3B32; /* Tono café oscuro sofisticado */
+  border-bottom: 1px solid #E5D8CC;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Estructura de la lista */
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legal-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Viñeta estilizada */
+.legal-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #B58D63; /* Color dorado/ocre para las viñetas */
+  font-size: 1.2rem;
+  line-height: 1;
+  top: 2px;
+}
+
+/* Texto en negrita del artículo */
+.legal-list li strong {
+  color: #2C221E;
+  font-weight: 600;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .info-card {
+    width: 95%;
+    padding: 20px 20px;
+    margin: 25px auto;
+  }
+}
