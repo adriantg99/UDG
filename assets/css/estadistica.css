@@ -1,0 +1,345 @@
+.estadistica {
+  --barra-principal: #977eaa;
+  --barra-secundaria: #b5a085;
+  width: min(1160px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+  font-family: var(--fuente-texto);
+  color: var(--texto);
+  line-height: 1.65;
+}
+
+.estadistica-intro {
+  margin-bottom: 44px;
+  padding: 0;
+}
+
+.estadistica-eyebrow {
+  color: var(--morado);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.estadistica-intro h2,
+.estadistica h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--morado-oscuro);
+}
+
+.estadistica-intro h2 {
+  margin: 8px 0 12px;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.2;
+}
+
+.estadistica-intro > p:last-child {
+  max-width: 720px;
+  color: #594c60;
+  font-size: 14px;
+}
+
+.estadistica-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.estadistica h3 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.estadistica-filter {
+  display: grid;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.estadistica-filter label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--morado-oscuro);
+}
+
+.estadistica-filter select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 30px 10px 12px;
+  border: 1px solid #c8b6d1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--morado-oscuro);
+  font: inherit;
+  font-size: 14px;
+}
+
+.estadistica select:focus-visible {
+  outline: 3px solid var(--morado-hover);
+  outline-offset: 3px;
+}
+
+.estadistica-note {
+  color: #594c60;
+  font-size: 14px;
+}
+
+.estadistica-source {
+  margin: 10px 0 20px;
+  color: #594c60;
+  font-size: 13px;
+}
+
+.estadistica-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 18px 0;
+  border-top: 1px solid #e5dfe9;
+  border-bottom: 1px solid #e5dfe9;
+}
+
+.estadistica-metric {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 12px;
+}
+
+.estadistica-metric span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.estadistica-metric strong {
+  color: var(--morado);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.estadistica-metric small {
+  margin-top: auto;
+  font-size: 12px;
+  color: #64586b;
+}
+
+.estadistica-charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.estadistica-chart {
+  min-width: 0;
+  padding: clamp(18px, 2.5vw, 28px);
+  border: 1px solid #eee8f1;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.estadistica-chart--wide {
+  grid-column: 1 / -1;
+}
+
+.estadistica-chart h5 {
+  margin-bottom: 8px;
+  color: var(--morado-oscuro);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.estadistica-chart > p {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #64586b;
+}
+
+.estadistica-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 18px;
+  list-style: none;
+  font-size: 12px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 3px;
+  background: var(--barra-principal);
+}
+
+.legend-dot--secondary {
+  background: var(--barra-secundaria);
+}
+
+.estadistica-bars {
+  list-style: none;
+}
+
+.estadistica-bars > li + li {
+  margin-top: 16px;
+}
+
+.estadistica-bar-label {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.estadistica-bar-series {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.estadistica-bar-series + .estadistica-bar-series {
+  margin-top: 5px;
+}
+
+.estadistica-bar-track {
+  flex: 1;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f0ecf3;
+}
+
+.estadistica-bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--barra-principal);
+}
+
+.estadistica-bar-fill--secondary {
+  background: var(--barra-secundaria);
+}
+
+.estadistica-bar-value {
+  flex: 0 0 28px;
+  text-align: right;
+  color: var(--morado-oscuro);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.estadistica-scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 36px 0 0;
+  padding-top: 6px;
+  border-top: 1px solid #ded2e5;
+  color: #64586b;
+  font-size: 11px;
+}
+
+.estadistica-detail {
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid #ded2e5;
+}
+
+.estadistica-report {
+  margin-top: 26px;
+}
+
+.estadistica-report + .estadistica-report {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid #e5dfe9;
+}
+
+.estadistica-report-title {
+  color: var(--morado-oscuro);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.estadistica-method {
+  margin-top: 32px;
+  padding: 18px 0;
+  border-top: 1px solid #e5dfe9;
+}
+
+.estadistica-method summary {
+  width: fit-content;
+  color: var(--morado-oscuro);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.estadistica-method summary:focus-visible {
+  outline: 3px solid var(--morado-hover);
+  outline-offset: 5px;
+}
+
+.estadistica-method ul {
+  max-width: 900px;
+  margin-top: 16px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #594c60;
+}
+
+.estadistica-method li + li {
+  margin-top: 8px;
+}
+
+.estadistica-aviso {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #c8b6d1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .estadistica-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .estadistica-chart--wide .estadistica-bars {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 32px;
+  }
+
+  .estadistica-chart--wide .estadistica-bars > li + li {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .estadistica {
+    width: 92%;
+    padding: 28px 0;
+  }
+
+  .estadistica-charts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .estadistica-section-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .estadistica-summary {
+    gap: 10px;
+  }
+
+  .estadistica-metric {
+    padding: 8px;
+  }
+}

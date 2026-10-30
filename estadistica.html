@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad de Género - TEE Sonora</title>
+    <title>Estadística - Unidad de Género - TEE Sonora</title>
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="stylesheet" href="assets/css/estadistica.css">
+    <script src="assets/js/estadistica-datos.js" defer></script>
+    <script src="assets/js/estadistica.js" defer></script>
 </head>
 
 <body>
@@ -65,14 +68,71 @@
                     </ul>
                 </li>
 
-                <li class="nav-item"><a href="estadistica.html" class="nav-link">ESTADÍSTICA</a></li>
+                <li class="nav-item"><a href="estadistica.html" class="nav-link" aria-current="page">ESTADÍSTICA</a></li>
                 <li class="nav-item"><a href="sentencias.html" class="nav-link">SENTENCIAS</a></li>
                 <li class="nav-item"><a href="actividades.html" class="nav-link">ACTIVIDADES</a></li>
             </ul>
         </nav>
     </header>
+    <main class="estadistica">
+        <header class="estadistica-intro">
+            <p class="estadistica-eyebrow">Unidad de Género · TEE Sonora</p>
+            <h2>Estadística</h2>
+            <p>Consulta de asuntos sobre violencia política contra las mujeres en razón de género.
+                Las cifras ofrecen una visión general y no describen las experiencias individuales.</p>
+        </header>
 
 
+        <noscript>
+            <p class="estadistica-aviso">Activa JavaScript para consultar las gráficas de ambos reportes.</p>
+        </noscript>
+        <p class="estadistica-aviso" id="estadistica-error" role="alert" hidden>
+            No fue posible cargar los datos estadísticos. Recarga la página.
+        </p>
+
+        <section aria-labelledby="cadena-title">
+            <div class="estadistica-section-head">
+                <div>
+                    <p class="estadistica-eyebrow">Panorama general</p>
+                    <h3 id="cadena-title">Expedientes y resoluciones</h3>
+                </div>
+            </div>
+            <p class="estadistica-note">Ambos reportes se muestran a continuación. Sus cifras se mantienen
+                separadas porque comparten registros.</p>
+            <div id="reportes-estadisticos"></div>
+        </section>
+
+        <section class="estadistica-detail" aria-labelledby="detalle-title">
+            <div class="estadistica-section-head">
+                <div>
+                    <p class="estadistica-eyebrow">Detalle del reporte PSVG</p>
+                    <h3 id="detalle-title">Información de los registros</h3>
+                </div>
+            </div>
+            <p class="estadistica-note">Información complementaria de 2025 y 2026; no se suma a los totales anteriores.</p>
+            <div id="periodos-estadisticos"></div>
+        </section>
+
+        <details class="estadistica-method">
+            <summary>Sobre los datos y su lectura</summary>
+            <ul>
+                <li>Los datos son una fotografía de los archivos proporcionados; no se actualizan automáticamente
+                    ni representan necesariamente el total institucional a la fecha de consulta.</li>
+                <li>El año del expediente se obtiene de su clave; el año de resolución, de la fecha de sentencia.
+                    Pueden ser diferentes.</li>
+                <li>Las cumplimentadoras cuentan como registros adicionales, no como nuevos expedientes.
+                    Las categorías “Pendiente” y “NA” conservan el significado literal del archivo:
+                    NA no se interpreta como un asunto pendiente.</li>
+                <li>La cadena TTUG contiene PSVG-SP-04/2026 y el bloque de detalle de 2026 contiene
+                    PSVG-PP-04/2026. Esta diferencia se conserva sin asumir que se trata del mismo expediente.</li>
+                <li>No se interpretan los campos sin encabezado del archivo ni los vacíos como respuestas negativas.</li>
+                <li>En la gráfica de sentencias se cuentan registros, no expedientes únicos. En la de conductas,
+                    un mismo registro puede contribuir a varias barras; su suma no representa un total de asuntos.</li>
+                <li>El detalle procede de los bloques “PERIODO 2025” y “PERIODO 2026” del archivo
+                    Reporte Estadistico PSVG.xlsx.</li>
+            </ul>
+        </details>
+    </main>
 
     <footer class="footer">
         <p>&copy; 2026 Unidad de Género. Todos los derechos reservados.</p>
