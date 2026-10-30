@@ -94,6 +94,10 @@
   transition: color 0.2s;
 }
 
+.nav-link[href="sentencias.html"] {
+  font-family: var(--fuente-titulos);
+}
+
 .nav-link:hover {
   color: var(--morado);
 }
@@ -170,4 +174,202 @@
     justify-content: center;
     gap: 4px 18px;
   }
+}
+
+.banner-morado {
+  background-color: #6a358a; /* Tono morado alineado con la barra */
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-contenido {
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-contenido h2 {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+/* Tarjeta/Caja contenedora idéntica a la interfaz */
+.contenedor-filtro {
+  background-color: #f8f9fad7; /* Fondo gris claro suave */
+  border: 1px solid #e9ecef;   /* Borde fino */
+  border-radius: 12px;        /* Esquinas muy redondeadas */
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.caja-periodo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icono-calendario {
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.etiqueta-periodo {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #212529;
+  cursor: pointer;
+}
+
+/* Selector estilizado igual a la imagen */
+.menu-desplegable {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 4px 28px 4px 10px;
+
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  cursor: pointer;
+  outline: none;
+  /* Personalización de la flecha */
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.menu-desplegable:hover {
+  border-color: #adb5bd;
+}
+
+.menu-desplegable:focus {
+  border-color: #0d6efd;
+}
+
+
+
+/* Centrado del selector de periodo */
+.centrado-padre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.contenedor-filtro {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+
+
+/* Caja de Sentencias centrada */
+.caja-sentencias {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.caja-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #ffffff;
+}
+
+.caja-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono-carpeta {
+  font-size: 20px;
+}
+
+.caja-titulo h2 {
+  font-family: var(--fuente-titulos);
+  
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.flecha-desplegable {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.lista-documentos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-documentos li {
+  border-top: 1px solid #f3f4f6;
+}
+
+.link-documento {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.link-documento:hover {
+  background-color: #f9fafb;
+}
+
+.flecha-icono {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.texto-documento {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
