@@ -133,15 +133,17 @@
 
 .actividades-fotos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .actividad-foto-card > img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
   background: #f2eef4;
@@ -167,6 +169,14 @@
 
 .actividad-foto-pendiente small {
   font-size: 12px;
+}
+
+.actividad-foto-copy {
+  padding: 16px 18px;
+}
+
+.actividad-foto-copy h4 {
+  font-size: 16px;
 }
 
 .actividad-foto-copy > p:last-child {

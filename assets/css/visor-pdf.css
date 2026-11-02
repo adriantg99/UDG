@@ -1,28 +1,21 @@
 /* ==========================================================
-   VISOR PDF: páginas que muestran un documento a pantalla completa
+   VISOR PDF: documento centrado con desplazamiento de página
    (guia.html, protocolo-vpmrg.html)
    ========================================================== */
 
-/* La página ocupa exactamente el alto de la ventana y el PDF llena el resto */
-html:has(.header-bar),
-body:has(.header-bar) {
-  height: 100%;
-  overflow: hidden;
-}
 
 body:has(.header-bar) {
-  display: flex;
-  flex-direction: column;
   font-family: Arial, sans-serif;
 }
 
 /* Barra con el título del documento y botón de descarga */
 .header-bar {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 16px;
-  padding: 12px 450px;
+  padding: 16px clamp(16px, 4vw, 60px);
   background-color: #703a8b;
   color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -30,6 +23,7 @@ body:has(.header-bar) {
 }
 
 .header-bar h2 {
+  max-width: 850px;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -56,9 +50,14 @@ body:has(.header-bar) {
 
 /* Contenedor del PDF */
 .pdf-container {
-  flex: 1;
-  min-height: 0;
-  width: 100%;
+  width: min(1200px, 94%);
+  height: 85vh;
+  min-height: 600px;
+  margin: 28px auto;
+  overflow: hidden;
+  border: 1px solid rgba(72, 32, 95, 0.16);
+  border-radius: 10px;
+  background: #ffffff;
 }
 
 .pdf-viewer {
@@ -73,26 +72,16 @@ body:has(.header-bar) {
   text-align: center;
 }
 
-@media (max-width: 1400px) {
-  .header-bar {
-    padding: 12px 40px;
-  }
-}
 
 @media (max-width: 768px) {
   .header-bar {
     padding: 10px 16px;
   }
 
-  /* En celular se permite el scroll para no ocultar el visor */
-  html:has(.header-bar),
-  body:has(.header-bar) {
-    height: auto;
-    overflow: auto;
-  }
 
   .pdf-container {
-    flex: none;
     height: 80vh;
+    min-height: 480px;
+    margin: 20px auto;
   }
 }
