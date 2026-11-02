@@ -140,8 +140,10 @@
 .actividad-foto-card > img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background: #f2eef4;
 }
 
@@ -169,6 +171,101 @@
 
 .actividad-foto-copy > p:last-child {
   font-size: 14px;
+}
+
+.actividades-publicaciones {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #e6dfe9;
+}
+
+.publicaciones-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+  color: #65596b;
+  font-size: 13px;
+}
+
+.publicaciones-arrows {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.publicaciones-arrows button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d8c9e0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--morado-oscuro);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.publicaciones-arrows button:hover:not(:disabled) {
+  background: var(--morado-claro);
+}
+
+.publicaciones-arrows button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.publicaciones-carrusel {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #b69bc5 #eee8f2;
+}
+
+.publicaciones-track {
+  display: flex;
+  gap: 20px;
+  padding: 6px 4px 16px;
+  list-style: none;
+}
+
+.publicaciones-track li {
+  flex: 0 0 clamp(240px, 27vw, 320px);
+  scroll-snap-align: start;
+}
+
+.publicaciones-track a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e6dfe9;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.publicaciones-track img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.publicaciones-carrusel:focus-visible,
+.publicaciones-track a:focus-visible,
+.publicaciones-arrows button:focus-visible {
+  outline: 3px solid var(--morado-hover);
+  outline-offset: -3px;
+}
+
+.publicaciones-fuente {
+  margin-top: 12px;
+  color: #65596b;
+  font-size: 12px;
+}
+
+.publicaciones-fuente a {
+  color: var(--morado);
 }
 
 .actividad-modal {

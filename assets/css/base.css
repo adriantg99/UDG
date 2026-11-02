@@ -48,6 +48,24 @@ img {
   color: #777777;
 }
 
+/* Página provisional */
+.pagina-construccion {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mensaje-construccion {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: 60px 20px;
+  color: var(--morado-oscuro);
+  font-family: var(--fuente-titulos);
+  font-size: clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
 /* Formato para negritas */
 strong {
   color: #111111;

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/actividades.css">
   <script src="assets/js/actividades.js" defer></script>
+  <script src="assets/js/actividades-carrusel.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +57,7 @@
           <ul class="dropdown-menu">
             <li><a href="guia.html">Guía para Juzgar con Perspectiva de Género en Materia Electoral</a></li>
             <li><a href="protocolo-vpmrg.html">Protocolo VPMRG</a></li>
-            <li><a href="#">Pacto Social</a></li>
+            <li><a href="pacto_social.html">Pacto Social</a></li>
             <li><a href="https://www.ieesonora.org.mx/registro_local_personas_sancionadas" target="_blank" rel="noopener noreferrer">Registro Local de Personas Sancionadas</a></li>
           </ul>
         </li>
@@ -77,9 +78,7 @@
   </div>
 
   <main class="actividades-page">
-    <header class="actividades-intro">
-      <p class="actividades-eyebrow">Unidad de Género · TEE Sonora</p>
-    </header>
+
 
     <section aria-labelledby="videos-title">
       <div class="actividades-heading">
@@ -125,52 +124,49 @@
       </div>
       <div class="actividades-fotos">
         <article class="actividad-foto-card">
-          <div class="actividad-foto-pendiente">
-            <span aria-hidden="true">▧</span>
-            <p>Fotografía de la actividad</p>
-            <small>Imagen por incorporar</small>
-          </div>
+          <img src="assets/img/dia_naranja/foto1.jpeg"
+            alt="Presentación de la Cartilla de Derechos de las Mujeres en el TEE Sonora"
+            width="929" height="1238" loading="lazy" decoding="async">
           <div class="actividad-foto-copy">
             <p class="actividades-eyebrow">Capacitación</p>
             <h4>Cartilla de Derechos de las Mujeres</h4>
-            <p>Imparte Secretaría de las Mujeres en Sonora (@SeMujeresSon), una capacitación al personal
-              del @TEE_Sonora, sobre la Cartilla de Derechos de las Mujeres.</p>
+            <p>La Secretaría de las Mujeres en Sonora capacitó al personal del TEE Sonora
+              sobre la Cartilla de Derechos de las Mujeres.</p>
           </div>
         </article>
         <article class="actividad-foto-card">
-          <div class="actividad-foto-pendiente">
-            <span aria-hidden="true">▧</span>
-            <p>Fotografía de la actividad</p>
-            <small>Imagen por incorporar</small>
-          </div>
+          <img src="assets/img/dia_naranja/foto2.jpeg"
+            alt="Entrega de reconocimiento durante la conferencia sobre perspectiva de género"
+            width="1076" height="1069" loading="lazy" decoding="async">
           <div class="actividad-foto-copy">
-            <p class="actividades-eyebrow">Espacio de actividad</p>
-            <h4>Actividad 2</h4>
-            <p>Fotografía y descripción por incorporar.</p>
+            <p class="actividades-eyebrow">Conferencia</p>
+            <h4>Perspectiva de género</h4>
+            <p>En colaboración con la Secretaría de las Mujeres en Sonora, se realizó una conferencia
+              para fortalecer la justicia electoral con enfoque de igualdad y derechos humanos.</p>
           </div>
         </article>
         <article class="actividad-foto-card">
-          <div class="actividad-foto-pendiente">
-            <span aria-hidden="true">▧</span>
-            <p>Fotografía de la actividad</p>
-            <small>Imagen por incorporar</small>
-          </div>
+          <img src="assets/img/dia_naranja/foto3.jpeg"
+            alt="Ponente de la conferencia sobre violencia digital en el TEE Sonora"
+            width="1076" height="1069" loading="lazy" decoding="async">
           <div class="actividad-foto-copy">
-            <p class="actividades-eyebrow">Espacio de actividad</p>
-            <h4>Actividad 3</h4>
-            <p>Fotografía y descripción por incorporar.</p>
+            <p class="actividades-eyebrow">Día Naranja</p>
+            <h4>Prevención de la violencia digital</h4>
+            <p>En el marco del Día Naranja, personal de la Secretaría de las Mujeres en Sonora
+              impartió una conferencia sobre prevención y atención de la violencia digital
+              para proteger los derechos de las mujeres.</p>
           </div>
         </article>
         <article class="actividad-foto-card">
-          <div class="actividad-foto-pendiente">
-            <span aria-hidden="true">▧</span>
-            <p>Fotografía de la actividad</p>
-            <small>Imagen por incorporar</small>
-          </div>
+          <img src="assets/img/dia_naranja/foto4.jpeg"
+            alt="Participantes de la reunión del grupo de trabajo sobre violencia política contra las mujeres"
+            width="1268" height="907" loading="lazy" decoding="async">
           <div class="actividad-foto-copy">
-            <p class="actividades-eyebrow">Espacio de actividad</p>
-            <h4>Actividad 4</h4>
-            <p>Fotografía y descripción por incorporar.</p>
+            <p class="actividades-eyebrow">Trabajo interinstitucional</p>
+            <h4>Participación política de las mujeres</h4>
+            <p>La magistrada presidenta Alejandra Velarde Félix y la secretaria general Aurora Guadalupe
+              Gutiérrez Ramírez participaron en el grupo de trabajo sobre violencia política contra las mujeres,
+              convocado por el Observatorio de Participación Política de las Mujeres en Sonora.</p>
           </div>
         </article>
         <article class="actividad-foto-card">
@@ -198,6 +194,64 @@
           </div>
         </article>
       </div>
+    </section>
+    <section class="actividades-publicaciones" aria-labelledby="publicaciones-title">
+    
+      <div class="publicaciones-controls">
+        <div class="publicaciones-arrows">
+          <button id="publicaciones-prev" type="button" aria-label="Ver publicaciones anteriores"
+            aria-controls="publicaciones-carrusel" hidden><span aria-hidden="true">‹</span></button>
+          <button id="publicaciones-next" type="button" aria-label="Ver publicaciones siguientes"
+            aria-controls="publicaciones-carrusel" hidden><span aria-hidden="true">›</span></button>
+        </div>
+      </div>
+      <div class="publicaciones-carrusel" id="publicaciones-carrusel" tabindex="0" role="region"
+        aria-roledescription="carrusel" aria-labelledby="publicaciones-title"
+        aria-describedby="publicaciones-instrucciones">
+        <ul class="publicaciones-track">
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-30-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-30-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 30 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-27-de-Noviembre2.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-27-de-Noviembre2.jpg"
+              alt="Publicación del Día Naranja del 27 de noviembre, imagen 1" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-27-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-27-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 27 de noviembre, imagen 2" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-21-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-21-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 21 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-15-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-15-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 15 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-10-de-Noviembre2-1.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-10-de-Noviembre2-1.jpg"
+              alt="Publicación del Día Naranja del 10 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-10-de-Diciembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-10-de-Diciembre.jpg"
+              alt="Publicación del Día Naranja del 10 de diciembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-8-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-8-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 8 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-6-de-Noviembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-6-de-Noviembre.jpg"
+              alt="Publicación del Día Naranja del 6 de noviembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+          <li><a href="assets/img/dia_naranja/publicaciones/Publicacion-6-de-Diciembre.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/dia_naranja/publicaciones/Publicacion-6-de-Diciembre.jpg"
+              alt="Publicación del Día Naranja del 6 de diciembre" width="300" height="300" loading="lazy" decoding="async">
+          </a></li>
+        </ul>
+      </div>
+    
     </section>
   </main>
 

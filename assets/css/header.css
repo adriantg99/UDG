@@ -24,16 +24,25 @@
   z-index: 1000; /* Mantiene el submenú por encima del resto de la página */
   overflow: visible;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
-  padding: 10px 40px;
+  justify-content: space-between;
+  gap: 16px clamp(16px, 2vw, 36px);
+  padding: 12px clamp(16px, 2vw, 40px);
   background-color: var(--fondo-header);
   border-bottom: 2px solid var(--morado);
 }
 
+.header-navigation > .logo {
+  flex: 0 0 auto;
+}
+
+.header-navigation .titulo-contenedor {
+  flex: 1 0 auto;
+}
+
 .logo img {
-  height: 90px;
+  height: clamp(64px, 5vw, 90px);
   width: auto;
   display: block;
   margin: 0;
@@ -41,6 +50,7 @@
 
 /* Línea vertical dorada con efecto metálico */
 .linea-separadora-dorada {
+  flex: 0 0 4px;
   width: 6px;
   height: 65px;
   background: linear-gradient(90deg,
@@ -56,18 +66,22 @@
 /* Texto UNIDAD DE GÉNERO */
 .titulo-encabezado {
   color: var(--morado);
-  font-size: 48px;
+  font-size: clamp(28px, 2.4vw, 46px);
   font-weight: 700;
   font-family: var(--fuente-titulos);
   text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 1;
+  letter-spacing: clamp(1px, 0.15vw, 3px);
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 /* 3. Menú de navegación */
 .menu-principal {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
   font-family: Arial, sans-serif;
 }
 
@@ -75,11 +89,12 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: clamp(12px, 1.2vw, 24px);
 }
 
 .nav-item {
   position: relative; /* Permite posicionar la lista flotante */
+  flex: 0 0 auto;
 }
 
 .nav-link {
@@ -88,6 +103,7 @@
   font-weight: bold;
   font-size: 13px;
   text-transform: uppercase;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -142,9 +158,27 @@
 
 /* 5. Pantallas medianas y pequeñas */
 @media (max-width: 1400px) {
-  .header-navigation {
+  .header-navigation .menu-principal {
+    flex-basis: 100%;
+  }
+
+  .header-navigation .titulo-contenedor {
+    text-align: center;
+  }
+
+  .header-navigation .nav-list {
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    min-width: 0;
+    width: min(280px, 80vw);
+  }
+
+  .nav-item.dropdown:nth-child(3) .dropdown-menu {
+    right: 0;
+    left: auto;
   }
 }
 
@@ -163,8 +197,15 @@
   }
 
   .titulo-encabezado {
-    font-size: 28px;
-    letter-spacing: 3px;
+    font-size: clamp(20px, 4.5vw, 28px);
+    letter-spacing: 1px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .header-navigation .titulo-contenedor {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .nav-list {
